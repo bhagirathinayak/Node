@@ -19,7 +19,7 @@ jobs:
           script: |
             git config --global --add safe.directory /Node
             cd /Node
-            git reset --hard HEAD
-            git pull
+            git checkout -- .
+            git pull origin main
             docker compose -f Docker-compose.yml down
             docker compose -f Docker-compose.yml up -d --build
