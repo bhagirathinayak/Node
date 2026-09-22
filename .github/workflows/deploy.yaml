@@ -14,10 +14,9 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: papun4693@hotmail.com
+          username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
             cd /Node
             git pull
-            docker compose down
             docker-compose up -d --build
