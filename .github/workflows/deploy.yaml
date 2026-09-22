@@ -17,6 +17,6 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd Node/
+            cd papun4693@hotmail.com@BNayak-PC:/Node
             git pull
             docker-compose up -d --build
