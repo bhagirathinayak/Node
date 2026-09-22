@@ -19,6 +19,7 @@ jobs:
           script: |
             git config --global --add safe.directory /Node
             cd /Node
+            git reset --hard HEAD
             git pull
             docker compose down
             docker compose up -d --build
